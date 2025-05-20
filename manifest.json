@@ -1,0 +1,31 @@
+{
+    "manifest_version": 2,
+    "name": "Time Tracker Glass",
+    "version": "1.0",
+    "description": "Track your website usage time with beautiful dark glassmorphism UI",
+    "icons": {
+        "48": "icons/icon-48.png",
+        "96": "icons/icon-96.png"
+    },
+    "permissions": [
+        "tabs",
+        "storage",
+        "webNavigation",
+        "webRequest",
+        "<all_urls>",
+        "alarms"
+    ],
+    "browser_action": {
+        "default_icon": {
+            "16": "icons/icon-16.png",
+            "32": "icons/icon-32.png"
+        },
+        "default_title": "Web Usage Tracker",
+        "default_popup": "popup/dashboard.html"
+    },
+    "background": {
+        "scripts": [
+            "background.js"
+        ]
+    }
+}

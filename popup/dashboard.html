@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Time Tracker Glass</title>
+    <link rel="stylesheet" href="dashboard.css">
+    <script src="chart.min.js"></script>
+</head>
+
+<body class="dark-theme">
+    <div class="header">
+        <div class="title">Time Tracker Glass</div>
+        <div class="theme-toggle">
+            <input type="checkbox" id="theme-toggle" class="theme-checkbox">
+            <label for="theme-toggle" class="theme-label">
+                <span class="toggle-icon">🌙</span>
+            </label>
+        </div>
+    </div>
+
+    <div id="home-view" class="view">
+        <div class="sub-header">
+            <h2>Click On Website To See Screen Times</h2>
+        </div>
+        <div id="websites-list" class="websites-list">
+            <!-- Websites will be populated here -->
+            <div class="loading">Loading your usage data...</div>
+        </div>
+    </div>
+
+    <div id="detail-view" class="view hidden">
+        <div class="sub-header">
+            <button id="back-btn" class="icon-btn">←</button>
+            <h2 id="site-title">Website</h2>
+        </div>
+        <div class="time-filters">
+            <button class="time-btn active" data-days="1">Today</button>
+            <button class="time-btn" data-days="2">Yesterday</button>
+            <button class="time-btn" data-days="7">7 Days</button>
+            <button class="time-btn" data-days="30">30 Days</button>
+        </div>
+        <div class="chart-container">
+            <canvas id="usage-chart"></canvas>
+        </div>
+        <div class="stats">
+            <div class="stat-box">
+                <div class="stat-label">Total Time</div>
+                <div id="total-time" class="stat-value">0h 0m</div>
+            </div>
+            <div class="stat-box">
+                <div class="stat-label">Daily Average</div>
+                <div id="daily-average" class="stat-value">0h 0m</div>
+            </div>
+        </div>
+    </div>
+
+    <script src="dashboard.js"></script>
+</body>
+
+</html>
